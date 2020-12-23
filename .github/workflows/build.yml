@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v1
         with:
           submodules: recursive
+      - run: mkdir -p output
       - name: Run pimod OpenWRT example
         uses: Nature40/pimod@HEAD
         with:
