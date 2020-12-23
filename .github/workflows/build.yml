@@ -12,4 +12,4 @@ jobs:
       - name: Run pimod OpenWRT example
         uses: Nature40/pimod@HEAD
         with:
-          pifile: tests/RPi-lite.Pifile
+          pifile: lite/RPi-lite.Pifile
