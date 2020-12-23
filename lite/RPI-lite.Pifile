@@ -1,5 +1,5 @@
 FROM https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-07/2020-02-05-raspbian-buster-lite.zip
-TO raspbian-buster-upgraded.img
+TO output/raspbian-buster-upgraded.img
 
 # Increase the image by 500 MB -> seems like we need to make sure the boot volume size
 PUMP 500M
@@ -16,7 +16,7 @@ RUN raspi-config nonint do_ssh 1
 # RUN raspi-config nonint do_wifi_country HK
 # RUN raspi-config nonint do_wifi_ssid_passphrase POISONOUS_HOME wing1212
 
-INSTALL "./test/wpa_supplicant.conf" "/boot/"
+INSTALL "./lite/wpa_supplicant.conf" "/boot/"
 
 # 
 

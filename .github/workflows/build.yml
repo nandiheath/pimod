@@ -13,3 +13,11 @@ jobs:
         uses: Nature40/pimod@HEAD
         with:
           pifile: lite/RPI-lite.Pifile
+      - name: Deploy to Github Page
+        uses: peaceiris/actions-gh-pages@v3
+        with:      
+          publish_dir: ./output
+          keep_files: true
+          # GitHub Actions runner automatically creates a GITHUB_TOKEN secret to use in your workflow. 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: nandiheath/pimod-deploy
